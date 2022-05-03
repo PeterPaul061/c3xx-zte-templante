@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>5.2</version>
-    <date>2022-04-30T15:28:07Z</date>
+    <date>2022-05-03T18:43:05Z</date>
     <groups>
         <group>
             <name>OLT</name>
@@ -32,8 +32,13 @@
                 <discovery_rule>
                     <name>PON Status</name>
                     <type>SNMP_AGENT</type>
-                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.2.2.1.2]</snmp_oid>
-                    <key>1.3.6.1.2.1.2.2.1.2</key>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.2.1.31.1.1.1.1]</snmp_oid>
+                    <key>interfacezte</key>
+                    <description>Pega o description da interface, por exemplo &quot;Slot1-Pon01&quot;:
+discovery[{#SNMPVALUE},.1.3.6.1.2.1.2.2.1.2]
+
+Pega no nome da interface &quot;gpon_1/1/1&quot;:
+discovery[{#SNMPVALUE},.1.3.6.1.2.1.31.1.1.1.1]</description>
                     <item_prototypes>
                         <item_prototype>
                             <name>Status {#SNMPVALUE}</name>
